@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- google fonts - for poppins font (UI look design) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+	<!-- bootstrap 5.3 css -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- page title -->
+	<title>Reader's Monthly Activity Report | LMS</title>
+
+</head>
+
+<body class="">
+	<!-- NAVBAR STARTS : common to all librarian pages -->
+
+	<div class="container pt-5">
+		<h3 class="mb-5 text-center">Monthly Activity Report for the period: {{ report_period }}</h3>
+
+		<p>Dear {{ name_title }} {{ name }},</p>
+
+		{% if table_data|length > 0  %}
+		<p>Kindly find your past month's book issues below.</p>
+		<br />
+
+		<div class="table-responsive mb-5">
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>Sr No.</th>
+						<th>Book Title</th>
+						<th>Book ISBN</th>
+						<th>Book Authors</th>
+						<th>Date Issued</th>
+						<th>Date Returned</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for book in table_data %}
+					<tr>
+						<td>{{ loop.index }}</td>
+						<td>{{ book.book_title }}</td>
+						<td>{{ book.book_isbn }}</td>
+						<td>
+							{% for a in book.book_authors %}
+								{{ a }}
+								{% if not loop.last %}
+									{{ ", " }}
+								{% endif %}
+							{% endfor %}
+						</td>
+						<td>{{ book.date_issued }}</td>
+						<td>{{ book.date_returned }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		{% else %}
+		<p>We did not found any records.</p>
+		{% endif %}
+
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous"></script>
+
+</html>

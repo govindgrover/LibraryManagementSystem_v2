@@ -1,0 +1,27 @@
+{
+	"name": "Library Management System -- v2",
+	"short_name": "LMS - v2",
+	"description": "IITM BS Degree | MAD 2 Project | May 24 - Term 2",
+	"start_url": "./",
+	"scope": ".",
+	"display": "standalone",
+	"background_color": "#fff",
+	"icons": [
+		{
+			"src": "/pwa/icons/icon_48.ico",
+			"sizes": "48x48"
+		},
+		{
+			"src": "/pwa/icons/icon_48.ico",
+			"sizes": "64x64"
+		},
+		{
+			"src": "/pwa/icons/icon_128.ico",
+			"sizes": "128x128"
+		},
+		{
+			"src": "/pwa/icons/icon_256.ico",
+			"sizes": "256x256"
+		}
+	]
+}

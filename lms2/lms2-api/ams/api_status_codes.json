@@ -1,0 +1,17 @@
+{
+	"200"	:	"Ok"
+	, "204"	:	"No Content"
+	, "206"	:	"Partial Content"
+	, "208"	:	"Already Reported"
+
+	, "300"	:	"Multiple Choices"
+	, "302"	:	"Found"
+
+	, "400"	:	"Bad Request"
+	, "401"	:	"Unauthorized"
+	, "403" :	"Forbidden"
+	, "404"	:	"Not Found"
+	, "405"	:	"Method Not Allowed"
+	, "406"	:	"Not Acceptable"
+	, "412"	:	"Precondition Failed"
+}

@@ -1,0 +1,18 @@
+{
+	"DEBUG": false
+	, "TESTING": false
+
+	, "SECRET_KEY": "hello"
+
+	, "PROPAGATE_EXCEPTIONS": true
+
+	, "SESSION_TYPE": "filesystem"
+
+	, "APP_LOGGER_FILE" : "app_logs.log"
+	, "TEMP_UPLOAD_FOLDER" : ".tmp_file_upload"
+	, "TEMP_GRAPH_IMAGES_FOLDER": ".tmp_graphs"
+
+	, "ROUTE_TO_GET_PROFILE_PICTURES" : "http://127.0.0.1:8000/static/pp"
+	, "ROUTE_TO_GET_BOOK_COVER_IMAGE" : "http://127.0.0.1:8000/static/ci"
+	, "ROUTE_TO_GET_DASHBOARD_GRAPHS" : "http://127.0.0.1:8000/get-graphs"
+}
